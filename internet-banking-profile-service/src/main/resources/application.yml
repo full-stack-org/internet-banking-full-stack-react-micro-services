@@ -1,0 +1,6 @@
+spring:
+  application:
+    name: internet-banking-profile-service
+    
+server:
+  port: 8083

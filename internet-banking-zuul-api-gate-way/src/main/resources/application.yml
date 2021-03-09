@@ -1,0 +1,33 @@
+spring:
+  application:
+    name: internet-banking-zuul-api-gate-way
+    
+server:
+  port: 8765
+
+zuul:
+  host:
+    connect-timeout-millis: 15000000
+    socket-timeout-millis: 15000000
+    connection-request-timeout-millis: 15000000
+    
+eureka:
+  client:
+    eureka-connection-idle-timeout-seconds: 40
+    eureka-server-connect-timeout-seconds: 40
+    eureka-server-read-timeout-seconds: 40
+
+ribbon:
+  eureka:
+    enabled: true
+  ReadTimeout: 9000000
+  ConnectTimeout: 9000000
+
+hystrix:
+  command:
+    default:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 15000000
+  
