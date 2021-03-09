@@ -1,0 +1,5 @@
+spring:
+  application:
+    name: internet-banking-internal-accounts
+
+server:  port: 8088

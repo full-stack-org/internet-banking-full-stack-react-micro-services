@@ -1,0 +1,6 @@
+spring:
+  application:
+    name: internet-banking-login-service
+    
+server:
+  port: 8081
