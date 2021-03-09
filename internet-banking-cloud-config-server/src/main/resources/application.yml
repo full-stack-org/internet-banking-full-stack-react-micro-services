@@ -1,0 +1,12 @@
+spring:
+  application:
+    name: internet-banking-cloud-config-server
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/full-stack-org/internet-banking-full-stack-react-micro-services/tree/main/internet-banking-git-config-files
+    
+server:
+  port: 8888
+  
