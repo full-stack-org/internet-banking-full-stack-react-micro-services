@@ -1,0 +1,15 @@
+{
+    "devURI":"http://localhost:8765",
+    "loginURI": "/internet-banking-login-service/internet/login/v1/authenticate",
+    "findByUserIdURI":"/internet-banking-forgot-password/ineternet/password/v1/findByCustomerId",
+    "updatedPasswordURI":"/internet-banking-forgot-password/ineternet/password/v1/updatePassword",
+    "openInternalAccountURI":"/internet-banking-internal-accounts/internet/internal/accounts/v1/openAccount",
+    "transferPaymentURI":"/internet-banking-payments-service/internet/payment/v1/createPayment",
+    "addExternalAccountURI":"/internet-banking-external-accounts/internet/external/account/v1/addExternalAccount",
+    "scheduledPaymentsURI":"/internet-banking-payments-service/internet/payment/v1/getAllScheduledPayments",
+    "updateProfileURI":"/internet-banking-profile-service/internet/profile/v1/updateProfile",
+    "internalAccountsListURI":"/internet-banking-internal-accounts/internet/internal/accounts/v1/getInternalAccounts",
+    "externalAccountsListURI":"/internet-banking-external-accounts/internet/external/account/v1/getAllExternalAccounts",
+    "validateRoutingNumberURI":"/internet-banking-routing-number/internet/routing/v1/validateRoutingNumber",
+    "profileDataURI":"/internet-banking-profile-service/internet/profile/v1/getCustomerProfile"
+}

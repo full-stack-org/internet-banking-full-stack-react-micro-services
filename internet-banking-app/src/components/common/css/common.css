@@ -1,0 +1,83 @@
+img.card-img-top {
+  height: 148px;
+  margin: auto;
+}
+
+.common-header {
+  height: 50px;
+  text-align: center;
+  font-size: 26px;
+  background-color: #34568b;
+  color: white;
+  line-height: 48px;
+  margin-top: 5px;
+}
+
+.common-footer {
+  height: 50px;
+  text-align: center;
+  font-size: 26px;
+  background-color: #34568b;
+  color: white;
+  margin-top: 15px;
+  line-height: 48px;
+}
+
+button.mb-2.ml-5.btn.btn-danger {
+  width: 87px;
+  float: right;
+}
+
+.next-style {
+  float: right;
+  width: 87px;
+}
+
+.responsive-header{
+  background-color: #34568b;
+}
+
+.navbar-light .navbar-brand {
+  color: white;
+}
+
+.navbar-light .navbar-nav .nav-link {
+  color: white;
+}
+
+.radio-style input[type=radio]{
+  margin-left: 3.75em !important;
+  height: 40px !important;
+  width: 29px !important;
+}
+
+.account-button-style{
+  width: 219px;
+}
+
+.print-style{
+  text-align: center;
+}
+
+.link-style{
+  text-decoration: underline;
+}
+
+.card-error-style{
+  border: 1px solid red;
+}
+
+.error-meessage{
+  font-size: 20px;
+  color: red;
+  margin-top: 3px;;
+  margin-bottom: 3px;
+  text-align: center;
+}
+
+.name-style{
+  float:right;
+  font-size: 20px;
+  color: maroon;
+  margin-bottom: 8px;
+}
