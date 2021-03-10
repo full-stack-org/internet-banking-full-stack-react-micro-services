@@ -1,0 +1,1129 @@
+{
+	"info": {
+		"_postman_id": "60bb0eef-4729-4018-bdcf-b82ffd14e8ac",
+		"name": "Internet Banking",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Internal Account Open",
+			"item": [
+				{
+					"name": "openNewAccount",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"aadharNumber\": \"9876543210\",\r\n  \"accountType\": \"savings\",\r\n  \"dateOfBirth\": \"1989-04-04\",\r\n  \"firstName\": \"Sunny\",\r\n  \"gender\": \"Male\",\r\n  \"lastName\": \"S\",\r\n  \"panNumber\": \"DAK0288623\",\r\n  \"password\": \"pass123$\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8084/internet/banking/v1/openNewAccount",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8084",
+							"path": [
+								"internet",
+								"banking",
+								"v1",
+								"openNewAccount"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getInternalAccounts",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"customerId\":97846298\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8084/internet/banking/accounts/v1/getInternalAccounts",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8084",
+							"path": [
+								"internet",
+								"banking",
+								"accounts",
+								"v1",
+								"getInternalAccounts"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "authenticate",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"customerId\":97846298,\r\n    \"password\":\"pass123$\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8084/internet/banking/login/v1/authenticate",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8084",
+							"path": [
+								"internet",
+								"banking",
+								"login",
+								"v1",
+								"authenticate"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "findByCustomerId",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "\r\n{\r\n    \"customerId\":97846298\r\n}  \r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8084/internet/banking/password/v1/findByCustomerId",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8084",
+							"path": [
+								"internet",
+								"banking",
+								"password",
+								"v1",
+								"findByCustomerId"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updatePassword",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"customerId\":97846298,\r\n    \"password\":\"pass123$\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8084/internet/banking/password/v1/updatePassword",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8084",
+							"path": [
+								"internet",
+								"banking",
+								"password",
+								"v1",
+								"updatePassword"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateProfile",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"aadharNumber\": \"9876543210\",\r\n  \"dateOfBirth\": \"1989-08-04\",\r\n  \"firstName\": \"Bunny\",\r\n  \"gender\": \"Male\",\r\n  \"id\": 1,\r\n  \"lastName\": \"Seelam\",\r\n  \"panNumber\": \"DAKPS0675J\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8084/internet/banking/profile/v1/updateProfile",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8084",
+							"path": [
+								"internet",
+								"banking",
+								"profile",
+								"v1",
+								"updateProfile"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "External Account Open",
+			"item": [
+				{
+					"name": "addExternalAccount",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"accountNumber\": \"99894926\",\r\n  \"customerId\": 97846298\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8085/internet/external/account/v1/addExternalAccount",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8085",
+							"path": [
+								"internet",
+								"external",
+								"account",
+								"v1",
+								"addExternalAccount"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getAllExternalAccounts",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"customerId\":97846298\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8085/internet/external/account/v1/getAllExternalAccounts",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8085",
+							"path": [
+								"internet",
+								"external",
+								"account",
+								"v1",
+								"getAllExternalAccounts"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Profile",
+			"item": [
+				{
+					"name": "updateProfile",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"aadharNumber\": \"9876543210\",\r\n  \"dateOfBirth\": \"1989-04-04\",\r\n  \"firstName\": \"Bunny\",\r\n  \"gender\": \"Male\",\r\n  \"id\": 1,\r\n  \"lastName\": \"S\",\r\n  \"panNumber\": \"DAKPS0675J\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8083/internet/profile/v1/updateProfile",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8083",
+							"path": [
+								"internet",
+								"profile",
+								"v1",
+								"updateProfile"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Payments",
+			"item": [
+				{
+					"name": "createPayment",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"customerId\": 97846298,\r\n  \"fromAccount\": \"987654321\",\r\n  \"paymentAmount\": 100,\r\n  \"paymentDate\": \"2020-02-19\",\r\n  \"toAccount\": \"897654321\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8087/internet/payment/v1/createPayment",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8087",
+							"path": [
+								"internet",
+								"payment",
+								"v1",
+								"createPayment"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getAllScheduledPayments",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"customerId\":97846298\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8087/internet/payment/v1/getAllScheduledPayments",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8087",
+							"path": [
+								"internet",
+								"payment",
+								"v1",
+								"getAllScheduledPayments"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		},
+		{
+			"name": "Forgot Password",
+			"item": [
+				{
+					"name": "findByCustomerId",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "\r\n{\r\n    \"customerId\":97846298\r\n}  \r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8082/ineternet/password/v1/findByCustomerId",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8082",
+							"path": [
+								"ineternet",
+								"password",
+								"v1",
+								"findByCustomerId"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updatePassword",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"customerId\":97846298,\r\n    \"password\":\"pass123$\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8082/ineternet/password/v1/updatePassword",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8082",
+							"path": [
+								"ineternet",
+								"password",
+								"v1",
+								"updatePassword"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Routing Number",
+			"item": [
+				{
+					"name": "addNewRoutingNumber",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"routingNumber\" :\"2000193007934\",\r\n    \"bankName\": \"Wells Fargo\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8086/internet/routing/v1/addNewRoutingNumber",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8086",
+							"path": [
+								"internet",
+								"routing",
+								"v1",
+								"addNewRoutingNumber"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "validateRoutingNumber",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"routingNumber\" :\"0011395969\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8086/internet/routing/v1/validateRoutingNumber",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8086",
+							"path": [
+								"internet",
+								"routing",
+								"v1",
+								"validateRoutingNumber"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Zuul Api Gate Way",
+			"item": [
+				{
+					"name": "authenticate",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"customerId\":97846298,\r\n    \"password\":\"pass123$\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8765/internet-banking-login-service/internet/login/v1/authenticate",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8765",
+							"path": [
+								"internet-banking-login-service",
+								"internet",
+								"login",
+								"v1",
+								"authenticate"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getInternalAccounts",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI5Nzg0NjI5OCIsImV4cCI6MTYxNDAyNjE2NywiaWF0IjoxNjEzOTkwMTY3fQ.vil_7kD5O2Qz0SvJCRC-QkHNYU5fLNWYZdXuH3ckgqw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"customerId\":97846298\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8765/internet-banking-internal-accounts/internet/internal/accounts/v1/getInternalAccounts",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8765",
+							"path": [
+								"internet-banking-internal-accounts",
+								"internet",
+								"internal",
+								"accounts",
+								"v1",
+								"getInternalAccounts"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "openAccount",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"aadharNumber\": \"99853262482\",\r\n  \"accountType\": \"savings\",\r\n  \"dateOfBirth\": \"1999-04-04\",\r\n  \"firstName\": \"Gopi\",\r\n  \"gender\": \"Male\",\r\n  \"lastName\": \"Raju\",\r\n  \"panNumber\": \"DAK0288623\",\r\n  \"password\": \"pass123$\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8765/internet-banking-internal-accounts/internet/internal/accounts/v1/openAccount",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8765",
+							"path": [
+								"internet-banking-internal-accounts",
+								"internet",
+								"internal",
+								"accounts",
+								"v1",
+								"openAccount"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "findByCustomerId",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "\r\n{\r\n    \"customerId\":97846298\r\n}  \r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8765/internet-banking-forgot-password/ineternet/password/v1/findByCustomerId",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8765",
+							"path": [
+								"internet-banking-forgot-password",
+								"ineternet",
+								"password",
+								"v1",
+								"findByCustomerId"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updatePassword",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"customerId\":97846298,\r\n    \"password\":\"pass123$\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8765/internet-banking-forgot-password/ineternet/password/v1/updatePassword",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8765",
+							"path": [
+								"internet-banking-forgot-password",
+								"ineternet",
+								"password",
+								"v1",
+								"updatePassword"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "addNewRoutingNumber",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI5Nzg0NjI5OCIsImV4cCI6MTYxNDAyNjE2NywiaWF0IjoxNjEzOTkwMTY3fQ.vil_7kD5O2Qz0SvJCRC-QkHNYU5fLNWYZdXuH3ckgqw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"routingNumber\" :\"2000193007934\",\r\n    \"bankName\": \"Wells Fargo\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8765/internet-banking-routing-number/internet/routing/v1/addNewRoutingNumber",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8765",
+							"path": [
+								"internet-banking-routing-number",
+								"internet",
+								"routing",
+								"v1",
+								"addNewRoutingNumber"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "validateRoutingNumber",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI5Nzg0NjI5OCIsImV4cCI6MTYxNDAyNjE2NywiaWF0IjoxNjEzOTkwMTY3fQ.vil_7kD5O2Qz0SvJCRC-QkHNYU5fLNWYZdXuH3ckgqw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"routingNumber\" :\"0011395969\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8765/internet-banking-routing-number/internet/routing/v1/validateRoutingNumber",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8765",
+							"path": [
+								"internet-banking-routing-number",
+								"internet",
+								"routing",
+								"v1",
+								"validateRoutingNumber"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "addExternalAccount",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI5Nzg0NjI5OCIsImV4cCI6MTYxNDAyNjE2NywiaWF0IjoxNjEzOTkwMTY3fQ.vil_7kD5O2Qz0SvJCRC-QkHNYU5fLNWYZdXuH3ckgqw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"accountNumber\": \"9989492926\",\r\n  \"customerId\": 97846298\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8765/internet-banking-external-accounts/internet/external/account/v1/addExternalAccount",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8765",
+							"path": [
+								"internet-banking-external-accounts",
+								"internet",
+								"external",
+								"account",
+								"v1",
+								"addExternalAccount"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getAllExternalAccounts",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI5Nzg0NjI5OCIsImV4cCI6MTYxNDAyNjE2NywiaWF0IjoxNjEzOTkwMTY3fQ.vil_7kD5O2Qz0SvJCRC-QkHNYU5fLNWYZdXuH3ckgqw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"customerId\":97846298\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8765/internet-banking-external-accounts/internet/external/account/v1/getAllExternalAccounts",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8765",
+							"path": [
+								"internet-banking-external-accounts",
+								"internet",
+								"external",
+								"account",
+								"v1",
+								"getAllExternalAccounts"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "createPayment",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI5Nzg0NjI5OCIsImV4cCI6MTYxNDAyNjE2NywiaWF0IjoxNjEzOTkwMTY3fQ.vil_7kD5O2Qz0SvJCRC-QkHNYU5fLNWYZdXuH3ckgqw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"customerId\": 97846298,\r\n  \"fromAccount\": \"987654321\",\r\n  \"paymentAmount\": 100,\r\n  \"paymentDate\": \"2020-02-22\",\r\n  \"toAccount\": \"897654321\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8765/internet-banking-payments-service/internet/payment/v1/createPayment",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8765",
+							"path": [
+								"internet-banking-payments-service",
+								"internet",
+								"payment",
+								"v1",
+								"createPayment"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getAllScheduledPayments",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI5Nzg0NjI5OCIsImV4cCI6MTYxNDAyNjE2NywiaWF0IjoxNjEzOTkwMTY3fQ.vil_7kD5O2Qz0SvJCRC-QkHNYU5fLNWYZdXuH3ckgqw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"customerId\":97846298\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8765/internet-banking-payments-service/internet/payment/v1/getAllScheduledPayments",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8765",
+							"path": [
+								"internet-banking-payments-service",
+								"internet",
+								"payment",
+								"v1",
+								"getAllScheduledPayments"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateProfile",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI5Nzg0NjI5OCIsImV4cCI6MTYxNDAyNjE2NywiaWF0IjoxNjEzOTkwMTY3fQ.vil_7kD5O2Qz0SvJCRC-QkHNYU5fLNWYZdXuH3ckgqw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"aadharNumber\": \"9876543210\",\r\n  \"dateOfBirth\": \"1989-04-04\",\r\n  \"firstName\": \"Bunny\",\r\n  \"gender\": \"Male\",\r\n  \"id\": 1,\r\n  \"lastName\": \"Sugguna\",\r\n  \"panNumber\": \"DAKPS0675J\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8765/internet-banking-profile-service/internet/profile/v1/updateProfile",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8765",
+							"path": [
+								"internet-banking-profile-service",
+								"internet",
+								"profile",
+								"v1",
+								"updateProfile"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getCustomerProfile",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI5Nzg0NjI5OCIsImV4cCI6MTYxNDEwNzUzOSwiaWF0IjoxNjE0MDcxNTM5fQ.0PNCX0Dkq7Gzy3_etJvJqJQTuGqVlqgH9Bdaq9Cd9Z4",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n     \"customerId\": 97846298\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8765/internet-banking-profile-service/internet/profile/v1/getCustomerProfile",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8765",
+							"path": [
+								"internet-banking-profile-service",
+								"internet",
+								"profile",
+								"v1",
+								"getCustomerProfile"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Login",
+			"item": [
+				{
+					"name": "authenticate",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"customerId\":97846298,\r\n    \"password\":\"pass123$\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8081/internet/login/v1/authenticate",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"internet",
+								"login",
+								"v1",
+								"authenticate"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Internal Accounts",
+			"item": [
+				{
+					"name": "openAccount",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI5Nzg0NjI5OCIsImV4cCI6MTYxNDAyNTM4OCwiaWF0IjoxNjEzOTg5Mzg4fQ.ymxyyg3BYP4NKjEPFjD4vDeNDCS-LgLihwc2tAhlUsY",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"aadharNumber\": \"99853262482\",\r\n  \"accountType\": \"savings\",\r\n  \"dateOfBirth\": \"1999-04-04\",\r\n  \"firstName\": \"Gopi\",\r\n  \"gender\": \"Male\",\r\n  \"lastName\": \"Raju\",\r\n  \"panNumber\": \"DAK0288623\",\r\n  \"password\": \"pass123$\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8088/internet/internal/accounts/v1/openAccount",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8088",
+							"path": [
+								"internet",
+								"internal",
+								"accounts",
+								"v1",
+								"openAccount"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
